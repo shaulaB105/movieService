@@ -15,7 +15,7 @@
         const [cnt, modCnt] = React.useState(0);
 
         function cntUp () {
-            modCnt(cnt + 1);
+            modCnt((current) => ++current);
         }
 
         return (

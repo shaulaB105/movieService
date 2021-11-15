@@ -1,0 +1,47 @@
+<!doctype>
+<html>
+<head>
+    <title>React Basic : Props</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.3/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+<script type="text/babel">
+    function Btn({innerTxt, changeValue, fontSize=12}){
+        return <button style={{
+            backgroundColor : "tomato",
+            color: "white",
+            padding : "10px 20px",
+            border : 0,
+            borderRadius : 10,
+            fontSize,
+        }}
+                       onClick={changeValue}
+        >{innerTxt}</button>;
+    }
+    const MemorizedBtn = React.memo(Btn);
+    Btn.propTypes = {
+        innerTxt : PropTypes.string.isRequired,
+        fontSize : PropTypes.number,
+    };
+
+    const App = () => {
+        const [val, setVal] = React.useState("Save Changes");
+        const changeVal = ()=> setVal("Revert Changes");
+        return (
+            <div>
+                <MemorizedBtn innerTxt = {val} changeValue ={changeVal} fontSize={16}/>
+                <MemorizedBtn innerTxt = "Confirm"/>
+            </div>
+        );
+    };
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+
+</script>
+</body>
+</html>

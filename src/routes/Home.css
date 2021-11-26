@@ -31,17 +31,15 @@ body,
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 50px;
-    padding-top: 70px;
-    width: 80%;
+    width: 85vw;
 }
 
 .movies .movie{
-    width: 45%;
+    width: 35vw;
     background-color: white;
     margin-bottom: 70px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     font-weight: 300;
     padding: 20px;
     color: #adaeb9;

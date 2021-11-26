@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 
 import {Link} from "react-router-dom";
 
-function MovieDetail ({movie}) {
+function MovieDetail (props) {
+    const {movie} = props;
+
     return (
         <div>
             <img src={movie.medium_cover_image} alt="movie cover"/>

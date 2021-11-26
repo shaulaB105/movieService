@@ -1,6 +1,6 @@
-function About() {
+function About(props) {
     return (
-        <div>
+        <div className="about__container">
             This is for study
         </div>
     );

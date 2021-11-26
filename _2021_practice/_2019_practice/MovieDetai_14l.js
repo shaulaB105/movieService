@@ -1,0 +1,19 @@
+import PropTypes from "prop-types";
+
+import {Link} from "react-router-dom";
+
+class MovieDetail extends React.Component {
+    componentDidMount() {
+        const {location, history} = this.props;
+        if(location.state ==undefined){
+            history.push("/");
+        }
+    }
+    render() {
+        return <span>hello</span>;
+    }
+}
+
+
+
+export default MovieDetail;

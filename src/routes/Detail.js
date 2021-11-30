@@ -18,7 +18,6 @@ function Detail(){
     }
     useEffect( ()=>{
         getMovie();
-
     }, []);
 
     return (

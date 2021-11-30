@@ -16,8 +16,7 @@
     height: 40px;
     margin-top: 40px;
     width: 85vw;
-    font-size: 40px;
-
+    font-size: 30px;
 }
 
 .menuList li:not(:last-child){

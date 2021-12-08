@@ -1,0 +1,22 @@
+.btn{
+    border-radius: 50px;
+    padding: 5px;
+    max-width: 120px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border : none;
+}
+
+.btn:active,
+.btn:focus{
+    outline: none;
+}
+
+.btn--success {
+    background-color: #2ecc71;
+}
+
+.btn--dander {
+    background-color: #e74c3c;
+}
